@@ -1,4 +1,6 @@
 1. docker run --rm -d --name solr-initial -p 8983:8983 solr solr-precreate initial_core
+docker exec -u 0 -it idContainter (docker ps) /bin/bash
 2. solr create -c nombreCore
-3. Desde Windows -> dokcer cp nombreArchivo.csv idContainer:/opt/solr/
-4. post -c nombreCore nombreArchivo.csv (refeerencia a donde estas parado) -params="separator=%3B" (para separar por ;)
+3. Desde Windows -> docker cp DataSolr.csv bd0745413052133f25e3f4a6df8eb8a8d0f27cb988ba174bb1034ecf19bcab83:/opt/solr/
+4. post -c prueba DataSolrUTF8.csv -params="separator=%3B&header=true"
+4. post -c nombreCore nombreArchivo.csv (refeerencia a donde estas parado) -params="separator=%3B, header=true" (para separar por ;)
