@@ -1,0 +1,4 @@
+1. docker run --rm -d --name solr-initial -p 8983:8983 solr solr-precreate initial_core
+2. solr create -c nombreCore
+3. Desde Windows -> docker cp DataSolr.csv idContainer:/opt/solr/
+4. post -c nombreCore DataSolr.csv -params="separator=%3B&header=true"
